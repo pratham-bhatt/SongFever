@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Player_Activity"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <!--    First Row-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:id="@+id/backBtn"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/prev_btn"
+            android:padding="10dp"
+            android:src="@drawable/white_back_icon"
+            tools:ignore="RedundantDescriptionCheck"
+            android:backgroundTint="@android:color/transparent"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:text="@string/player_title"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights"
+            android:textStyle="bold"
+            />
+
+        <!--        Favourite Button-->
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/favourite_empty"
+            android:background="?attr/selectableItemBackground"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="@string/favourite_btn"
+            app:tint="@android:color/holo_red_dark"
+            android:backgroundTint="@android:color/transparent"/>
+    </LinearLayout>
+
+    <!--    Current Song Image-->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:src="@drawable/splash_screen"
+        app:strokeColor="@color/cool_blue"
+        app:strokeWidth="5dp"/>
+
+    <!--    Current Song Name-->
+    <TextView
+        android:layout_width="631dp"
+        android:layout_height="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/song_name"
+        android:textColor="@color/black"
+        android:textIsSelectable="true"
+        android:textSize="30sp" />
+
+    <!--    Floating Buttons for Previous, Pause & Next-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <!--        Previous Button-->
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/previous_icon"
+            app:iconSize="40dp"
+            android:contentDescription="@string/back_btn"/>
+
+        <!--        Play & Pause Button-->
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/pause_icon"
+            app:iconSize="50dp"
+            android:layout_marginHorizontal="25dp"
+            android:backgroundTint="@android:color/holo_red_light"
+            app:iconTint="@color/white"
+            android:contentDescription="@string/play_pause_btn"
+            />
+
+        <!--        Next Button-->
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/next_svgrepo_com__1_"
+            app:iconSize="40dp"
+            android:contentDescription="@string/next_btn"
+            />
+
+    </LinearLayout>
+
+    <!--    Seekbar & TextViews for it-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:text="@string/start_tv"
+            android:gravity="center"/>
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights" />
+
+        <TextView
+            android:id="@+id/tvSeekBarEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="@string/end_tv"
+            android:gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/repeat_icon"
+            android:contentDescription="@string/repeat"
+            app:tint="@color/black"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/equalizer_icon"
+            android:contentDescription="@string/equalizer"
+            app:tint="@color/black"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/timer_icon"
+            android:contentDescription="@string/timer"
+            app:tint="@color/black"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/share_icon"
+            android:contentDescription="@string/share"
+            app:tint="@color/black"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

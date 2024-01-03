@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Songfever</string>
+    <string name="shuffle_btn">shuffle</string>
+    <string name="favourite_btn">Favourites</string>
+    <string name="playlist_btn">Playlist</string>
+    <string name="songs">Today\'s Pick for you!</string>
+    <string name="player_title">Musical Universe</string>
+    <string name="back_btn">Back Button</string>
+    <string name="prev_btn">previous Button</string>
+    <string name="next_btn">Next Button</string>
+    <string name="play_pause_btn">play pause Button</string>
+    <string name="song_name">Song Name</string>
+    <string name="start_tv">00:00</string>
+    <string name="end_tv">buffering</string>
+    <string name="equalizer">Equalizer</string>
+    <string name="repeat">repeat</string>
+    <string name="timer">timer</string>
+    <string name="share">share</string>
+    <string name="add_btn">add</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+</resources>
